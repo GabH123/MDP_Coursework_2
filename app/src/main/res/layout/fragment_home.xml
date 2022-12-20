@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:foregroundGravity="center"
+    android:orientation="vertical"
+
+    tools:context=".View.HomeFragment.HomeFragment">
+
+    <Button
+        android:id="@+id/addNewSchedule"
+        android:layout_width="47dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconGravity="top"
+        android:onClick="createNewSchedulePopup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wentToSleepText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:text="Went to sleep at: "
+        android:textSize="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/goToSleepOrWakeUpText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/goToSleepOrWakeUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="220dp"
+        android:gravity="center"
+        android:text="You should go to sleep at:"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homeMainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/ic_home_main_btn"
+        android:text="Going to sleep"
+        android:onClick="switchMode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendedSleepTimeText" />
+
+    <TextView
+        android:id="@+id/recommendedSleepTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="-:- - -:-"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToSleepOrWakeUpText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
